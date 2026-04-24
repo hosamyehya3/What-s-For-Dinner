@@ -27,14 +27,15 @@ body{
     color:  rgb(255, 83, 15) !important ;
 }
 .head-img{
-    border-top-left-radius:10px ;
-    border-bottom-left-radius:10px ;
-    background-image: url(../img-8/photo-1585032226651-759b368d7246.avif);
-    background-position: center;
-    background-size: cover;
- 
+ overflow: hidden;
 
 }
+.img-head{
+    height: 1000px;
+    border-radius: 50%;
+   
+}
+
 .badge{
     width: fit-content;
     border-radius: 20px;
@@ -42,8 +43,6 @@ body{
     display: flex;
     flex-wrap: wrap;
     color: black;
-    padding: 5px;
-    justify-content: center;
     align-items: center;
     gap: 5px;
     position: absolute;
@@ -169,6 +168,9 @@ scrollbar-width: thin ;
     scroll-behavior: smooth;
     scrollbar-color: var(--mainColor) ;
 }
+.height-fixd{
+    height: 380px !important;
+}
 .n-2{
     width: 50px;
     height: 50px;
@@ -203,7 +205,7 @@ gap:20px;
 }
 .correct-icon{
     width: 90%;
-    height: 60px;
+    height: 80px;
     border-radius:10px;
     background-color: rgb(255, 251, 235);
     border-left:5px solid var(--mainColor) ;
@@ -220,4 +222,42 @@ gap:20px;
 .my-btn:hover{
  background-image:linear-gradient(to right , rgb(233, 0, 8) ,rgb(255, 102, 0) ) !important ;
  transform: scale(1.05);
+}
+.last-button{
+width: 40%;
+  
+}
+@media screen and (max-width:576px) {
+  .container .head-img{
+    width: 100%;
+    background-size:cover ;
+    height: 100vh;
+    border-radius: 20px;
+
+  }   
+  .detail-cooking div  {
+    font-size: 15px !important;
+  }
+.detail-cooking div p{
+    font-size: 15px;
+}
+.content-img{
+    width: 100%;
+}
+}
+@media screen and (min-width:576px) and (max-width:1200px){
+     .container .head-img{
+    width: 100%;
+    background-size:cover ;
+    height: 100vh;
+    border-radius: 20px;
+}
+.container .content-img{
+    width: 100%;
+}
+
+
+
+
+
 }
