@@ -1,6 +1,7 @@
+
 var listFood = [
     {
-
+        textother:"Greek Moussaka",
         recipeImg: "./img-8/photo-1601050690597-df0568f70950.avif",
         Ingredients: [
             "3 large eggplants, sliced",
@@ -39,7 +40,7 @@ var listFood = [
 }
 ,
     {
-
+textother:"Margherita Pizza",
         recipeImg: "./img-8/photo-1574071318508-1cdbab80d002.avif",
         Ingredients: [
             "300g pizza dough",
@@ -75,7 +76,7 @@ var listFood = [
         
 },
     {
-
+        textother:"Chicken Stir-Fry",
         recipeImg: "./img-8/photo-1603133872878-684f208fb84b.avif",
         Ingredients: [
             "500g chicken breast, sliced",
@@ -114,6 +115,7 @@ var listFood = [
 },
     {
 
+        textother:"Shrimp Scampi",
         recipeImg: "./img-8/photo-1633504581786-316c8002b1b9.avif",
         Ingredients: [
             "400g large shrimp, peeled",
@@ -151,7 +153,7 @@ var listFood = [
         
 },
     {
-
+        textother:"Creamy Spaghetti Carbonara",
         recipeImg: "./img-8/photo-1612874742237-6526221588e3.avif",
         Ingredients: [
             "400g spaghetti pasta",
@@ -185,8 +187,47 @@ var listFood = [
             "Freshly grated cheese makes all the difference in flavor",
         ]
         
+},
+    {
+        textother:"Classic Beef Burger",
+        recipeImg: "./img-8/photo-1568901346375-23c9450c58cd.avif",
+        Ingredients: [
+            "500g ground beef (80/20)",
+            "4 burger buns",
+            "4 slices cheddar cheese",
+            "Lettuce leaves",
+            "Tomato slices",
+            "Red onion, sliced",
+            "Pickles",
+            "Burger sauce or condiments"
+        ],
+        Instructions: [
+            "Divide ground beef into 4 equal portions. Form into patties, making a small indent in the center.",
+            "Season patties generously with salt and pepper on both sides.",
+            "Heat a grill or skillet over high heat. Cook patties for 4-5 minutes per side for medium.",
+            "Add cheese slices in the last minute of cooking and cover to melt.",
+            "Toast burger buns lightly on the grill or in a pan.",
+            "Assemble burgers with lettuce, tomato, onion, pickles, and your favorite sauce.",
+        ],
+        Nutrition: {
+            Calories: "650 kcal",
+            Carbohydrates: "42g",
+            Fiber: "2g",
+            Protein: "38g",
+            Fat:  "35g",
+            Sodium: "920mg"
+        },
+        ChefTips: [
+            "Don't press down on burgers while cooking - keeps them juicy",
+            "Make indent in center to prevent burger from puffing up",
+            "Let patties rest for 2-3 minutes before serving",
+            "Toast buns for better texture and flavor",
+        ]
+        
 }
-]
+];
+
+getReceip();
 
 function getReceip() {
     var randomNum = Math.floor(Math.random() * listFood.length);
@@ -195,13 +236,16 @@ function getReceip() {
     var receipe = listFood[randomNum];
 
     document.getElementById("repeipeImg").src = receipe.recipeImg;
+    document.getElementById('textother').innerHTML = receipe.textother;
 
     constructIngredients(receipe.Ingredients)
-    
+    constructInstructions(receipe.Instructions);
+    Cheftip(receipe.ChefTips);
+
 }
 
-function constructIngredients(ingredients) {
-    console.log(ingredients);
+function constructIngredients (ingredients) {
+    
     document.getElementById("ingredients").innerHTML = "";
 
     for (var i = 0 ; i < ingredients.length; i++) {
@@ -214,6 +258,37 @@ function constructIngredients(ingredients) {
             </div>
         `
     }
+}
 
+function constructInstructions(instructions) {
+    document.getElementById("instructions").innerHTML = "";
+    
+    for (var i = 0; i < instructions.length; i++) {
+        var instruction = instructions[i];
 
+        document.getElementById("instructions").innerHTML += `
+          <div class="d-flex mb-3" >
+           <div class="n-2"><h4>${i + 1}</h4></div>
+            <div class="ms-2">
+                <p>${instruction}</p>
+            </div>
+            </div>
+          `;
+
+    }
+}
+
+function Cheftip(ChefTips) {
+     document.getElementById("Chef").innerHTML = "";
+      for (var i = 0; i < ChefTips.length; i++) {
+        var Chef = ChefTips[i];
+        document.getElementById("Chef").innerHTML +=`
+         <div class="correct-icon  ">
+                                    <i class="fa-solid fa-circle-check fa-lg mt-4 ms-4"
+                                        style="color: rgb(175, 138, 4);"></i>
+                                    <span class="text-secondary">${Chef}</span>
+                                </div>
+        
+        `
+}
 }

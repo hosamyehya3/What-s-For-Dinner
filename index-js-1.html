@@ -9,6 +9,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="icon" href="./img-8/9126282.png">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
@@ -68,7 +69,6 @@
                     <i class="fa-solid fa-star fa-xl" style="color: rgb(255, 212, 59);"></i>
                     <h2 class="h5 fw-bold mt-1">4.6</h2>
                     <p class="text-secondary mt-3">(289 reviews)</p>
-
                 </div>
                 <div class="detail-cooking position-absolute ">
                     <div class="left">
@@ -96,7 +96,7 @@
                     <div class="padge-1">Easy</div>
                     <div class="padge-2">Asian</div>
                     <div class="head-food-asian">
-                        <h1 class="fw-bold">Vegetable Curry</h1>
+                        <h1 class="fw-bold" id="textother">Vegetable Curry</h1>
                         <p class="text-secondary">Hearty vegetarian curry with coconut milk</p>
                     </div>
                     <div class="d-flex ms-5 ">
@@ -160,18 +160,10 @@
                             </div>
                         </div>
                         <div class="tab-pane fade height-fix" id="pills-profile" role="tabpanel"
-                            aria-labelledby="pills-profile-tab" tabindex="0">
-                            <div class="d-flex mb-3">
-                                <div class="n-2">
-                                    <h4>1</h4>
-                                </div>
-                                <div class="ms-2">
-                                    <p>Heat oil in a large pot. Sauté onion until soft, add garlic and curry powder,
-                                        cook for 1 minute.</p>
-                                </div>
-
-                            </div>
-                            <div class="d-flex mb-3">
+                            aria-labelledby="pills-profile-tab" tabindex="0" >
+                    
+                            <div id="instructions"></div>
+                            <!-- <div class="d-flex mb-3"  id="instructions">
                                 <div class="n-2">
                                     <h4>2</h4>
                                 </div>
@@ -216,7 +208,7 @@
                                     <p>Serve hot over basmati rice or with naan bread.</p>
                                 </div>
 
-                            </div>
+                            </div> -->
 
                         </div>
                         <div class="tab-pane fade height-fix" id="pills-contact" role="tabpanel"
@@ -229,7 +221,7 @@
                                     </div>
                                     <span class="fw-semibold ">Calories</span>
                                     <div>
-                                        <h2 class="fw-semibold h4">380 kcal</h2>
+                                        <h2 class="fw-semibold h4" id="calories"></h2>
                                     </div>
                                 </div>
                                 <div class="d-flex cover justify-content-between align-items-center h-100">
@@ -238,7 +230,7 @@
                                     </div>
                                     <span class="fw-semibold ">Carbohydrates</span>
                                     <div>
-                                        <h2 class="fw-semibold h4">48g</h2>
+                                        <h2 class="fw-semibold h4 " id="Carbohydrates">48g</h2>
                                     </div>
                                 </div>
                                 <div class="d-flex cover justify-content-between align-items-center h-100">
@@ -247,7 +239,7 @@
                                     </div>
                                     <span class=" fw-semibold">Fiber</span>
                                     <div>
-                                        <h2 class="fw-semibold h4">12g</h2>
+                                        <h2 class="fw-semibold h4" id="fiber">12g</h2>
                                     </div>
                                 </div>
                                 <div class="d-flex cover justify-content-between align-items-center h-100">
@@ -256,7 +248,7 @@
                                     </div>
                                     <span class="fw-semibold ">Protein</span>
                                     <div>
-                                        <h2 class="fw-semibold h4">14g</h2>
+                                        <h2 class="fw-semibold h4" id="protein">14g</h2>
                                     </div>
                                 </div>
                                 <div class="d-flex cover justify-content-between align-items-center h-100">
@@ -265,7 +257,7 @@
                                     </div>
                                     <span class="fw-semibold">Fat</span>
                                     <div>
-                                        <h2 class="fw-semibold h4">16g</h2>
+                                        <h2 class="fw-semibold h4" id="fat">16g</h2>
                                     </div>
                                 </div>
                                 <div class="d-flex cover justify-content-between align-items-center h-100">
@@ -274,7 +266,7 @@
                                     </div>
                                     <span class="fw-semibold">Sodium</span>
                                     <div>
-                                        <h2 class="fw-semibold h4">480mg</h2>
+                                        <h2 class="fw-semibold h4" id="soudium">480mg</h2>
                                     </div>
                                 </div>
 
@@ -283,8 +275,8 @@
                         </div>
                         <div class="tab-pane fade " id="pills-chef" role="tabpanel" aria-labelledby="pills-chef-tab"
                             tabindex="0">
-                            <div class="Chefs mx-auto">
-                                <div class="correct-icon  ">
+                            <div class="Chefs mx-auto" id="Chef">
+                                <!-- <div class="correct-icon  ">
                                     <i class="fa-solid fa-circle-check fa-lg mt-4 ms-4"
                                         style="color: rgb(175, 138, 4);"></i>
                                     <span class="text-secondary">Add vegetables in order of cooking time needed</span>
@@ -303,7 +295,7 @@
                                     <i class="fa-solid fa-circle-check fa-lg mt-4 ms-4"
                                         style="color: rgb(175, 138, 4);"></i>
                                     <span class="text-secondary">Add protein like tofu or paneer if desired</span>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
